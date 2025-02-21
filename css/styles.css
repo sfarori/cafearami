@@ -2,59 +2,179 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-}
-
-
-.minavbar{
-  padding: 12px;
-  width: 100%;
-  color: #ffffff;
-  font-style: none;
-  background-color: #333;
-  overflow: hidden;
-}
-
-
-.hero {
-    position: relative;
-    background: url('iguazu.jpg') rgba(19, 19, 19, 0.3) center/cover no-repeat;
-    background-size: cover;
-    background-blend-mode: multiply;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-title {
-    font-size: 3em;
-    margin-bottom: 20px;
+  }
+  
+  .minavbar {
+    padding: 10px; 
+    width: 100%;
+    color: #ffffff;
+    font-style: none;
+    background-color: #333;
+  }
+  
+  .minavbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .minavbar li {
+    float: left;
+  }
+  
+  .minavbar li a {
+    display: block;
     color: white;
-
-}
-
-.hero-subtitle {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .minavbar li a:hover {
+    background-color: #eb9b61;
+  }
+  
+  .hero {
+    position: relative;
+    text-align: center;
+  }
+  
+  .hero img {
+    width: 100%;
+  }
+  
+  .hero-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 16px;
+  }
+  
+  .hero-subtitle {
     font-size: 1.5em;
     margin-bottom: 30px;
     color: white;
-
-}
-
-.hero-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    text-decoration: none;
-    color: #fff;
-    background-color: #3498db;
+  }
+  
+  .contacto {
+    padding: 40px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar el contenido horizontalmente */
+    justify-content: center; /* Centrar el contenido verticalmente */
+    text-align: center; /* Asegurar que el texto también esté centrado */
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  
+  .contacto form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .contacto label {
+    margin: 10px 0 5px;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+  
+  }
+  
+  .contacto input[type="email"],
+  .contacto textarea {
+    width: 100%; 
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1.5px solid #d7d7d7;
+    border-radius: 4px;
+  }
+  
+  .contacto input[type="submit"] {
+    padding: 8px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.hero-button:hover {
-    background-color: #2980b9;
-}
-
-.hero-content {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+  
+  .contacto input[type="submit"]:hover {
+    background-color: #f1c056;
+  }
+  
+  .info-contacto {
     text-align: center;
-}
+    margin-top: 24px;
+  }
+  
+  .info-contacto p {
+    font-size: 14px;
+    color: #6f6f6f;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .carrusel {
+    margin-top: 24px;
+  }
+  
+  .descripcion {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .descripcion h2 {
+    color: #343a40;
+    margin-bottom: 15px;
+  }
+  
+  .descripcion p {
+    line-height: 1.6;
+  }
+  
+  .carrusel {
+    margin-top: 20px;
+  }
+  
+  .carrusel img {
+    border-radius: 5px;
+  }
+  
+  .promo{
+    padding: 40px;
+    background-color: #343a40;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  
+  .promo h2{
+    color: white;
+  }
+  
+  .promo p{
+    color: white;
+  }
+  
+  .minavbar{
+    padding: 10px;
+    display: flex;
+  }
