@@ -4,33 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href= "css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <div class="navbar">
-    <div class="nav-logo">
-      <a><h2>LOGO</h2><!--<img src="#">--></a>
+        <nav class="minavbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href=".contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </div>
-    <div class="nav-menu-mobile" data-status="closed">
-      <span>MENU</span>
-      <i class="menu-toggle fa-solid fa-bars"></i>
-    </div>
-    <ul class="nav-menu">
-      <li><a class="nav-menu-item" href="#">Inicio</a></li>
-      <li><a class="nav-menu-item" href="#">Destinos</a></li>
-      <li><a class="nav-menu-item" href="#">Ofertas</a></li>
-      <li><a class="nav-menu-item" href="#">Contacto</a></li>   
-      </div></li>
-      <li><a class="nav-menu-item" href="#">More</a></li>
-    </ul>
-    
-  </div>
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Descubrí el turismo</h1>
-            <p class="hero-subtitle">Encontrá los mejores destinos</p>
-            <a href="#" class="hero-button">Vamos por ello</a>
+    <section class="hero">
+        <img src="images/caferecoleccion.jpg" alt="cafe">
+        <div class="hero-texto">
+            <h1>Prueba el mejor café de Irupana, Bolivia.</h1>
+            <p>Café arabica con delicioso sabor</p>
         </div>
-    </header>    
+    </section>
+    <section class="promo">
+      <h2>PROMOCIÓN POR EL MES DE MARZO</h2>
+        <P>¡Disfruta del exquisito café de Irupana, Bolivia, con nuestra oferta especial de marzo! Durante todo el mes, podrás obtener 500 gramos de nuestro café en grano de alta calidad a un precio increíble.
+
+          Características del café:
+          
+          100% Arábica
+          
+          Sabor suave y delicioso
+          
+          Tostado artesanal
+          
+          Precio Especial: Solo por este mes, 500 gramos por [precio].
+          
+          ¡No te pierdas esta oportunidad de deleitarte con el mejor café boliviano! Visítanos en nuestra tienda o realiza tu pedido en línea.
+          
+          ¡Apresúrate, la oferta es válida hasta el 31 de marzo!</P>
+      <img src="images/brown-italian-wood-heap-abundance.jpg" alt="coffee">
+    </section>
+    <section class="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="consulta">Consulta:</label>
+            <textarea id="consulta" name="consulta" rows="4" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+        <div class="info-contacto">
+            <p>Dirección: Calle Principal #123, Irupana, Los Yungas, Bolivia</p>
+            <p>Teléfono: +591 123 456 789</p>
+            <p>Correo Electrónico: info@cafeirupana.com</p>
+            <p>Horario de Atención: Lunes a Viernes, 8 AM - 6 PM</p>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-</html>             
+</html>
