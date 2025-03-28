@@ -1,0 +1,67 @@
+@use 'navbar';
+
+.contacto {
+  padding: 40px;
+  background-color: #ffffff;
+  margin-top: 20px;
+
+
+  form {
+    display: block;
+    max-width: 600px; 
+    margin: 0; /* Centra el formulario si es más pequeño que el contenedor */
+
+
+    label {
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%; // Este asegura que todos tengan el mismo ancho
+      padding: 10px; // Espacio interno entre el texto y el borde
+      margin-bottom: 20px;
+      border: 1.5px solid #d7d7d7;
+      border-radius: 4px;
+      box-sizing: border-box; // Incluir el padding y el borde en el ancho total del elemento
+      
+      // Evita cualquier margen extra que pueda afectar
+      margin: 0;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+      height: auto; // Asegúrate de que esta propiedad se aplique de la forma deseada
+    }
+
+    // Estilos para el botón de envío
+    button[type="submit"] {
+      background-color: #333;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #555;
+      }
+    }
+  }
+}
+
+// Media queries para responsividad
+@media (max-width: 768px) {
+  .contacto {
+    padding: 20px;
+  }
+
+  .contacto form {
+    max-width: 100%;
+  }
+}

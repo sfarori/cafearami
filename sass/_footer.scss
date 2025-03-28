@@ -1,0 +1,62 @@
+footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+  color: #ecf0f1;
+  padding: 40px 20px;
+  text-align: center;
+
+  .footer-content {
+      max-width: 100%;
+      margin: 0 auto;
+
+      p {
+          margin: 10px 0;
+          font-size: 16px;
+          line-height: 1.5;
+
+          &:hover {
+              color: #1abc9c;
+          }
+      }
+
+      .social-links {
+          margin-top: 20px;
+
+          a {
+              color: #ecf0f1;
+              text-decoration: none;
+              font-size: 24px; /* Tamaño del ícono */
+              width: 45px; /* Tamaño del círculo */
+              height: 45px; /* Igual al ancho para que sea un círculo */
+              line-height: 45px; /* Centrar el ícono verticalmente */
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              background-color: rgba(255, 255, 255, 0.1);
+              transition: all 0.3s ease;
+
+              &:hover {
+                  background-color: #1abc9c;
+                  transform: translateY(-2px);
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              }
+          }
+
+          .facebook:hover {
+              color: #3b5998;
+          }
+
+          .twitter:hover {
+              color: #00acee;
+          }
+
+          .instagram:hover {
+              color: #e1306c;
+          }
+
+          .linkedin:hover {
+              color: #0077b5;
+          }
+      }
+  }
+}

@@ -1,0 +1,116 @@
+/* Variables */
+$primary-color: #333;
+$secondary-color: #fff;
+$accent-color: #2598c3;
+
+/* Estilos de la Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 10px 40px;
+  position: relative; /* Necesario para posicionar el menú desplegable */
+
+  .logo {
+    color: $secondary-color;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 20px;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+
+    li {
+      margin-left: 20px;
+
+      a {
+        color: $secondary-color;
+        text-decoration: none;
+        font-size: 1rem;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+
+  /* Estilos del menú hamburguesa */
+  .menu-toggle {
+    display: none; /* Oculto por defecto */
+  }
+
+  .hamburger {
+    display: none; /* Oculto en pantallas grandes */
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+      height: 3px;
+      width: 25px;
+      background-color: $secondary-color;
+      margin-bottom: 5px;
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+
+      &:nth-child(2) {
+        width: 20px; /* La segunda línea es más corta */
+      }
+    }
+  }
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar {
+    .menu {
+      display: none; /* Oculta el menú por defecto */
+      flex-direction: column; /* Cambia a diseño vertical */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $primary-color;
+      z-index: 10; /* Asegura que el menú esté por encima de otros elementos */
+
+      li {
+        margin-left: 0; /* Elimina el margen izquierdo */
+        text-align: center; /* Centra los elementos */
+
+        a {
+          padding: 10px; /* Espaciado adicional */
+          display: block; /* Ocupa toda la línea */
+        }
+      }
+    }
+
+    .hamburger {
+      display: flex; /* Muestra el ícono hamburguesa */
+    }
+
+    /* Muestra el menú cuando el checkbox está activado */
+    .menu-toggle:checked ~ .menu {
+      display: flex; /* Muestra el menú */
+    }
+
+    /* Animación del ícono hamburguesa cuando está activo */
+    .menu-toggle:checked + .hamburger span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(2) {
+      opacity: 0; /* Oculta la línea del medio */
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+}
